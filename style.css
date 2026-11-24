@@ -1,0 +1,334 @@
+
+/* =================================
+   GENERAL RESET AND BASE STYLES
+================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #222222;
+    background-color: #f8fafc;
+}
+
+/* =================================
+   HEADER
+================================= */
+
+header {
+    background-color: #075985;
+    color: #ffffff;
+    text-align: center;
+    padding: 25px 15px;
+}
+
+header h1 {
+    font-size: 32px;
+    margin-bottom: 5px;
+}
+
+header p {
+    font-size: 17px;
+}
+
+/* =================================
+   NAVIGATION
+================================= */
+
+nav {
+    background-color: #e0f2fe;
+    padding: 15px;
+    text-align: center;
+}
+
+nav a {
+    display: inline-block;
+    color: #075985;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 5px 15px;
+}
+
+nav a:hover {
+    color: #0c4a6e;
+    text-decoration: underline;
+}
+
+/* =================================
+   MAIN CONTENT
+================================= */
+
+main {
+    max-width: 1100px;
+    width: 90%;
+    margin: 25px auto;
+}
+
+section {
+    background-color: #ffffff;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+}
+
+section h2 {
+    color: #075985;
+    margin-bottom: 15px;
+    font-size: 25px;
+}
+
+section h3 {
+    color: #0c4a6e;
+    margin-bottom: 8px;
+    font-size: 20px;
+}
+
+section p {
+    margin-bottom: 10px;
+}
+
+/* =================================
+   HOSPITAL SERVICES
+================================= */
+
+#services article {
+    background-color: #f0f9ff;
+    border-left: 5px solid #0284c7;
+    padding: 18px;
+    margin: 15px 0;
+    border-radius: 5px;
+}
+
+/* =================================
+   DOCTOR INFORMATION
+================================= */
+
+#doctors article {
+    background-color: #f0fdf4;
+    border-left: 5px solid #15803d;
+    padding: 18px;
+    margin: 15px 0;
+    border-radius: 5px;
+}
+
+/* =================================
+   APPOINTMENT FORM
+================================= */
+
+#appointment {
+    background-color: #ffffff;
+}
+
+form {
+    max-width: 650px;
+    margin: 20px auto;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    color: #222222;
+}
+
+input,
+select,
+textarea {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    font-family: inherit;
+    color: #222222;
+    background-color: #ffffff;
+    border: 1px solid #64748b;
+    border-radius: 5px;
+}
+
+input:hover,
+select:hover,
+textarea:hover {
+    border-color: #075985;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #075985;
+    outline: 2px solid #075985;
+    outline-offset: 2px;
+}
+
+/* =================================
+   FORM VALIDATION
+================================= */
+
+input:required:invalid:not(:placeholder-shown) {
+    border-color: #b91c1c;
+}
+
+input:required:valid {
+    border-color: #15803d;
+}
+
+/* =================================
+   BUTTON
+================================= */
+
+button {
+    display: inline-block;
+    background-color: #075985;
+    color: #ffffff;
+    border: none;
+    padding: 13px 25px;
+    margin-top: 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0c4a6e;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+/* =================================
+   EMERGENCY INFORMATION
+================================= */
+
+aside {
+    background-color: #fff7ed;
+    border-left: 5px solid #c2410c;
+    padding: 20px;
+    margin-bottom: 25px;
+    border-radius: 5px;
+}
+
+aside h2 {
+    color: #9a3412;
+    margin-bottom: 10px;
+}
+
+/* =================================
+   FOOTER
+================================= */
+
+footer {
+    background-color: #075985;
+    color: #ffffff;
+    text-align: center;
+    padding: 25px 15px;
+}
+
+footer h2 {
+    margin-bottom: 10px;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+/* =================================
+   ACCESSIBILITY
+================================= */
+
+/* Visible keyboard focus */
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid #f59e0b;
+    outline-offset: 3px;
+}
+
+/* Clear link interaction */
+
+a {
+    text-underline-offset: 3px;
+}
+
+/* Respect reduced-motion preferences */
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* =================================
+   RESPONSIVE DESIGN
+================================= */
+
+@media (max-width: 768px) {
+
+    header h1 {
+        font-size: 26px;
+    }
+
+    nav a {
+        display: block;
+        margin: 10px;
+    }
+
+    main {
+        width: 95%;
+    }
+
+    section {
+        padding: 18px;
+    }
+
+    section h2 {
+        font-size: 22px;
+    }
+
+    form {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+
+    body {
+        font-size: 15px;
+    }
+
+    header h1 {
+        font-size: 23px;
+    }
+
+    button {
+        width: 100%;
+    }
+
+    input,
+    select,
+    textarea {
+        font-size: 16px;
+    }
+}
